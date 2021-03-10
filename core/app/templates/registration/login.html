@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title  %}
+  login here
+{% endblock %}
+
+{% block content  %}
+
+<form  method="post">
+  {% if user.is_authenticated  %}
+      <p> Already logged in </p>
+      <p> <a href="/manage"> Go to management</a></p>
+      <p> Click <a href="/logout"> here</a> to logout </p>
+
+  {% else %}
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" name="button">Login</button>
+    <p>For signup click here <a href="signup-for-user">Here </a> </p>
+  {% endif %}
+</form>
+
+
+{% endblock %}

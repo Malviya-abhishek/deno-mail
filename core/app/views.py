@@ -8,7 +8,10 @@ from .models import Contact
 
 app_name = 'app'
 
-def signUp(request):
+def signUp(request, username):
+
+    print(username)
+
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -25,3 +28,16 @@ def signUp(request):
         }
 
     return render(request, './app/signup.html'  , ctx )
+
+def signupForUser(request):
+    
+
+def manage(request):
+    ctx = {
+        'title':'Welcome!',
+        'content':'this is content'
+    }
+    return render(request, './app/manage.html'  , ctx )
+
+def newsletter(request):
+    return HttpResponse('newsletter')

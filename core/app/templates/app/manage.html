@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title  %}
+  {{ title }}
+{% endblock %}
+
+
+
+{% block content %}
+  {% if user.is_authenticated  %}
+    <p> Click <a href="/logout"> here</a> to logout </p>
+      {{ content }}
+      <p><a href="/newsletter"> Write a new newsletter </a></p>
+  {% else %}
+    <p>Login <a href="/login">Here</a>  </p>
+  {% endif %}
+{% endblock %}
