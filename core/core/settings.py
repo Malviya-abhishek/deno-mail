@@ -124,3 +124,18 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/manage'
 
 LOGOUT_REDIRECT_URL = '/login'
+
+AUTH_USER_MODEL = 'app.User'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+
+# delete later
+EMAIL_HOST_USER = 'pythonislit@gmail.com'
+EMAIL_HOST_PASSWORD =  'thisispassword123$'
+# ####################
+
+
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
