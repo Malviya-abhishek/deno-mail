@@ -4,8 +4,7 @@ from django.contrib.auth import login, authenticate
 from .forms import ContactForm, UserRegistrationForm, MailForm
 from .models import Contact, User
 from django.core.mail import send_mail
-# nameisname
-# qwer789456
+
 
 def signup(request, username):
     if request.method == 'POST':
